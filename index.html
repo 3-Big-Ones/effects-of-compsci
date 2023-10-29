@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-auto">
     <head>
         <title>The effects of computer science</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./output.css" rel="stylesheet">
     </head>
-    <body>
-        <nav class="flex w-full h-16 bg-black text-white items-center">
-            <div> INSERT LOGO AND OUR TEAM NAME </div>
-            <a href="#" class="grid ml-6">Home</a>
-            <a href="#" class="grid ml-6">About</a>
-            <a href="#" class="grid ml-6">Content</a>
-        </nav>
-        <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
+    <body class="overflow-hidden">
+        <header>
+            <nav class="flex w-full h-16 bg-black text-white items-center">
+                <a href="#" class="flex items-center justify-start"><img src="assets/logo.png" alt="A.K.A" width="64" height="100"></a>
+                <a href="#" class="grid ml-6">Home</a>
+                <a href="#" class="grid ml-6">About</a>
+                <a href="#" class="grid ml-6">Content</a>
+            </nav>
+        </header>
+        <main class="bg-hero bg-cover">
+            <div class="flex h-screen flex-col items-center justify-center">
+                <!--Title of the page-->
+                <h1 class="my-4 font-bold text-8xl tracking-tight bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 bg-clip-text text-transparent leading-normal">
+                    Technology & Society
+                </h1>
+                <button class="border-black border-2 bg-white">Learn more</button>
+            </div>
+        </main>
         <script src="./js/index.js"></script>
     </body>
 </html>
