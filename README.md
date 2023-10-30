@@ -1,11 +1,11 @@
 # Effects of computer science on society
 ### Initial installation
-Prerequisites: nodejs, miniserve
+Prerequisites: nodejs
 ```bash
 npm install
 ```
 
 ### Development
 ```bash
-npm run watch
+npm run dev
 ```
