@@ -14,7 +14,11 @@ module.exports = {
                 },
             },
         },
+        extend: {
+            backgroundImage: {
+                "hero": "url('./assets/Technology.jpg')",
+            },
+        },
     },
     plugins: [],
 }
-
