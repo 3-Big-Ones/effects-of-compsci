@@ -1,26 +1,27 @@
 {
-  "name": "effects-of-compsci",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "watch:tailwind": "npx tailwindcss -i ./base.css -o ./output.css --watch",
-    "watch:typescript": "tsc --watch",
-    "run:miniserve": "miniserve . --index=index.html",
-    "watch": "npm run watch:tailwind & npm run watch:typescript & npm run run:miniserve & wait"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/3-Big-Ones/effects-of-compsci.git"
-  },
-  "author": "Alexandre, An, Keima",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/3-Big-Ones/effects-of-compsci/issues"
-  },
-  "homepage": "https://github.com/3-Big-Ones/effects-of-compsci#readme",
-  "devDependencies": {
-    "tailwindcss": "^3.3.4",
-    "typescript": "^5.2.2"
-  }
+    "name": "effects-of-compsci",
+    "version": "1.0.0",
+    "description": "A small website describing the positive effects computer have had on society.",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build --emptyOutDir",
+        "serve": "vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/3-Big-Ones/effects-of-compsci.git"
+    },
+    "author": "Alexandre, An, Keima",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/3-Big-Ones/effects-of-compsci/issues"
+    },
+    "homepage": "https://github.com/3-Big-Ones/effects-of-compsci#readme",
+    "devDependencies": {
+        "autoprefixer": "^10.4.16",
+        "postcss": "^8.4.31",
+        "tailwindcss": "^3.3.5",
+        "typescript": "^5.2.2",
+        "vite": "^4.5.0"
+    }
 }

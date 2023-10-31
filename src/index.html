@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-auto">
+
+<head>
+    <title>The effects of computer science</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body class="overflow-hidden flex flex-col min-h-screen">
+    <nav
+        class="flex w-full justify-between h-16 px-5 dark:text-white text-black items-center bg-gradient-to-t dark:from-gray-800 dark:via-gray-900 dark:to-black bg-zinc-100">
+        <div class="flex justify-center items-center">
+            <a href="#" class="flex items-center justify-start">
+                <img src="img/logo.png" alt="A.K.A" width="64"
+                    height="100">
+            </a>
+            <a href="#" class="grid ml-6">Home</a>
+            <a href="#" class="grid ml-6">About</a>
+            <a href="#" class="grid ml-6">Content</a>
+        </div>
+
+        <select id="theme-selector"
+            class="bg-slate-900 text-slate-50 dark:bg-slate-100 dark:text-slate-900 block rounded-lg p-2">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+            <option value="system">System</option>
+        </select>
+    </nav>
+    <main class="bg-hero bg-cover grow flex flex-col items-center justify-center">
+        <!--Title of the page-->
+        <h1
+            class="my-2 font-bold md:text-8xl text-4xl text-center md:leading-relaxed leading-normal tracking-tight bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 bg-clip-text text-transparent">
+            Technology & Society
+        </h1>
+        <div
+            class="mx-[13vw] my-4 p-4 text-xl text-white font-serif bg-black bg-opacity-60 border-gray-500 border-2 rounded-xl">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+        </div>
+        <button class="my-2 mb-4 px-6 py-4 font-mono text-3xl border-black border-2 rounded-full bg-white">Learn
+            more</button>
+    </main>
+    <script type="module" src="./ts/common.ts"></script>
+    <script type="module" src="./ts/index.ts"></script>
+</body>
+
+</html>
