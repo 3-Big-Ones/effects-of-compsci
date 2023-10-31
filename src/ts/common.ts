@@ -1,5 +1,7 @@
 // This file includes any javascript common to all pages.
 
+type Theme = "dark" | "light" | "system";
+
 function load_theme(): void {
     if (localStorage.theme === "dark" || (!localStorage.hasOwnProperty("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
         document.documentElement.classList.add("dark")
@@ -8,17 +10,18 @@ function load_theme(): void {
     }
 }
 
-// type Theme = "dark" | "light" | "system";
 //
-// function on_theme_change(event: HTMLInputElement): void {
-//     const theme: Theme = event.target.value;
-//     if (theme === "system") { localStorage.removeItem("theme") }
-//     else { localStorage.theme = theme };
-//     load_theme();
-// }
-//
-const theme_selector = document.getElementById("theme-selector")!
-    .addEventListener("onchange", (e) => console.log(e));
+function set_theme(theme: Theme): void {
+    if (theme === "system") { localStorage.removeItem("theme") }
+    else { localStorage.theme = theme };
+    load_theme();
+}
+
+const theme_selector = document.getElementById("theme-selector")! as HTMLInputElement;
+
+theme_selector.addEventListener("change", (e: { target: HTMLInputElement }): void => set_theme(e.target.value as Theme));
+
+theme_selector.value = localStorage.hasOwnProperty("theme") ? localStorage.theme : "system";
 
 load_theme();
 

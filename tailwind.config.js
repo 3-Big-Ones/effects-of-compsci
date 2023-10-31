@@ -5,7 +5,6 @@ module.exports = {
     darkMode: "class",
     content: ["./src/**/*.{html,ts}"],
     theme: {
-        colors: colors,
         extend: {
             colors: {
                 primary: {
@@ -16,7 +15,7 @@ module.exports = {
         },
         extend: {
             backgroundImage: {
-                "hero": "url('./assets/Technology.jpg')",
+                "hero": "url('./technology.jpg')",
             },
         },
     },

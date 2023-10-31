@@ -8,4 +8,9 @@ export default {
     build: {
         outDir: path.join(process.cwd(), "dist"),
     },
+    server: {
+        watch: {
+            polling: true,
+        },
+    },
 }

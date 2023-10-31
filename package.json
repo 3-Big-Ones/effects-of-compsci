@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "A small website describing the positive effects computer have had on society.",
     "scripts": {
-        "dev": "TAILWIND_MODE=watch vite",
-        "build": "TAILWIND_MODE=build vite build",
+        "dev": "vite",
+        "build": "vite build --emptyOutDir",
         "serve": "vite preview"
     },
     "repository": {
