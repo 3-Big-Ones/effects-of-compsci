@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-auto">
     <head>
         <title>The effects of computer science</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./output.css" rel="stylesheet">
     </head>
-    <body>
-        <nav class="flex w-full h-16 bg-black text-white items-center">
-            <a href="#" class="flex items-center justify-start"><img src="assets/A.K.A (1).png" alt="A.K.A" width="64" height="100"></a>
+    <body class="overflow-hidden flex flex-col min-h-screen">
+        <nav class="flex w-full h-16 bg-black text-white items-center bg-gradient-to-t from-gray-800 via-gray-900 to-black">
+            <a href="#" class="flex items-center justify-start"><img src="assets/logo.png" alt="A.K.A" width="64" height="100"></a>
             <a href="#" class="grid ml-6">Home</a>
             <a href="#" class="grid ml-6">About</a>
             <a href="#" class="grid ml-6">Content</a>
         </nav>
-        <div class="flex h-screen flex-col items-center justify-center bg-opacity-100">
-            <!--Background Image-->
-            <img src="assets/Technology.jpg" class="mix-blend-overlay absolute w-full object-cover" >
+        <main class="bg-hero bg-cover grow flex flex-col items-center justify-center">
             <!--Title of the page-->
-            <h1 class="my-4 text-center font-bold text-8xl tracking-tight bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 bg-clip-text text-transparent opacity-100">
+            <h1 class="my-2 font-bold md:text-8xl text-4xl md:leading-relaxed leading-normal tracking-tight bg-gradient-to-r from-green-500 via-blue-500 to-pink-500 bg-clip-text text-transparent">
                 Technology & Society
             </h1>
-            <button class="border-black border-2 text-center bg-white">Learn more</button>
-        </div>
+            <div class="mx-[13vw] my-4 p-4 text-xl text-white font-serif bg-black bg-opacity-60 border-gray-500 border-2 rounded-xl">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.
+                </p>
+            </div>
+            <button class="my-2 mb-4 px-6 py-4 font-mono text-3xl border-black border-2 rounded-full bg-white">Learn more</button>
+        </main>
         <script src="./js/index.js"></script>
     </body>
 </html>
