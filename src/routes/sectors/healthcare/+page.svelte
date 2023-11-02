@@ -1,4 +1,4 @@
-<div class="grow flex flex-col">
+<div class="bg-hero-healthcare bg-cover bg-fixed grow flex flex-col">
     <!--Heading-->
     <div class="md:mx-32 mx-12 md:my-24 my-10 grow flex flex-row">
         <h1 class="md:basis-4/5 font-bold md:text-8xl text-5xl text-left">
