@@ -16,6 +16,7 @@ module.exports = {
         extend: {
             backgroundImage: {
                 "hero-index": "url('./img/technology.jpg')",
+                "hero-healthcare": "url('./img/healthcare.jpg')",
             },
         },
     },
