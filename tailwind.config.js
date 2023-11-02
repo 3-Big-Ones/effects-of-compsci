@@ -1,24 +1,17 @@
-const colors = require("tailwindcss/colors");
-
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
+    content: ["src/**/*.{html,ts,svelte,js}"],
     darkMode: "class",
-    content: ["./src/**/*.{html,ts}"],
     theme: {
         extend: {
-            colors: {
-                primary: {
-                    ...colors.red,
-                    DEFAULT: colors.red[500]
-                },
+            screens: {
+                xs: "512px",
             },
-        },
-        extend: {
             backgroundImage: {
-                "hero-index": "url('./img/technology.jpg')",
+                "hero-home": "url('img/technology.jpg');",
                 "hero-healthcare": "url('./img/healthcare.jpg')",
             },
         },
     },
     plugins: [],
-}
+};
