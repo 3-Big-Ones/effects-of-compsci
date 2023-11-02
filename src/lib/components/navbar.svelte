@@ -40,7 +40,7 @@
     <div class="hidden xs:flex w-full h-16 px-5 justify-between items-center">
         <div class="hidden justify-center items-center xs:flex">
             <a href="/" class="flex items-center justify-start">
-                <img src="img/logo.png" alt="A.K.A" width="64" height="100" />
+                <img src="/img/logo.png" alt="A.K.A" width="64" height="100" />
             </a>
             <a href="/" class="ml-6">Home</a>
             <a href="/about" class="ml-6">About</a>
