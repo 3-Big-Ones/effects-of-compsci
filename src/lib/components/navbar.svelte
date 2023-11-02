@@ -3,6 +3,8 @@
     import ThemeToggle from "./theme_toggle.svelte";
     import Menu from "~icons/gg/menu";
     import Close from "~icons/gg/close";
+    import ChevronUp from "~icons/gg/chevron-up";
+    import ChevronDown from "~icons/gg/chevron-down";
 
     let mobile_menu = false;
     let mobile_content_drawer = false;
@@ -56,14 +58,22 @@
     >
         <a href="/" class="px-2 py-1.5">Home</a>
         <a href="/" class="px-2 py-1.5">About</a>
-        <button class="px-2 py-1.5" on:click={toggle_drawer}>Content</button>
+        <button class="px-2 py-1.5 flex justify-between items-center" on:click={toggle_drawer}>
+            <span>Content</span>
+            {#if mobile_content_drawer}
+                <ChevronUp />
+            {:else}
+                <ChevronDown />
+            {/if}
+        </button>
+        <div class="h-px bg-zinc-400"></div>
         <div class:hidden={!mobile_content_drawer} class="flex flex-col gap-y-1.5 px-2 bg-zinc-300 dark:bg-zinc-700">
             <a href="/">Todo</a>
             <a href="/">Todo</a>
             <a href="/">Todo</a>
         </div>
         <div class="h-px bg-zinc-400"></div>
-        <div class="w-fit flex justify-center items-center p-2">
+        <div class="flex w-full justify-start items-center p-2">
             <svelte:component this={ThemeToggle} show_text />
         </div>
     </div>

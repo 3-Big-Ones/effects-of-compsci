@@ -11,7 +11,7 @@
     };
     export let show_text = false;
 </script>
-<button class="flex justify-center items-center" on:click={toggle_theme}>
+<button class="flex justify-start items-center" class:w-full={show_text} on:click={toggle_theme}>
     <div class:hidden={$theme !== "dark"}>
         <Moon />
     </div>
