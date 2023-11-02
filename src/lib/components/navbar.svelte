@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { theme } from "$lib/theme";
     import ThemeToggle from "./theme_toggle.svelte";
     import Menu from "~icons/gg/menu";
     import Close from "~icons/gg/close";
@@ -8,8 +7,12 @@
 
     let mobile_menu = false;
     let mobile_content_drawer = false;
-    function toggle_menu(): void { mobile_menu = !mobile_menu;}
-    function toggle_drawer(): void { mobile_content_drawer = !mobile_content_drawer;}
+    function toggle_menu(): void {
+        mobile_menu = !mobile_menu;
+    }
+    function toggle_drawer(): void {
+        mobile_content_drawer = !mobile_content_drawer;
+    }
 </script>
 
 <!-- Set the theme initally in the head to prevent theme only being applied after content is shown. -->
@@ -39,9 +42,9 @@
             <a href="/" class="flex items-center justify-start">
                 <img src="img/logo.png" alt="A.K.A" width="64" height="100" />
             </a>
-            <a href="/" class="grid ml-6">Home</a>
-            <a href="/" class="grid ml-6">About</a>
-            <a href="/" class="grid ml-6">Content</a>
+            <a href="/" class="ml-6">Home</a>
+            <a href="/about" class="ml-6">About</a>
+            <button class="ml-6">Sectors</button>
         </div>
         <!-- Theme selection buttons -->
         <ThemeToggle />
@@ -57,22 +60,31 @@
         class="xs:hidden flex flex-col w-full bg-zinc-200 dark:bg-zinc-800"
     >
         <a href="/" class="px-2 py-1.5">Home</a>
-        <a href="/" class="px-2 py-1.5">About</a>
-        <button class="px-2 py-1.5 flex justify-between items-center" on:click={toggle_drawer}>
-            <span>Content</span>
-            {#if mobile_content_drawer}
-                <ChevronUp />
-            {:else}
-                <ChevronDown />
-            {/if}
+        <a href="/about" class="px-2 py-1.5">About</a>
+        <button
+            class="px-2 py-1.5 flex justify-between items-center"
+            aria-label="Sectors"
+            aria-controls="mobile_content_drawer"
+            aria-expanded={mobile_content_drawer}
+            on:click={toggle_drawer}
+        >
+            <span>Sectors</span>
+            {#if mobile_content_drawer} <ChevronUp /> {:else} <ChevronDown /> {/if}
         </button>
-        <div class="h-px bg-zinc-400"></div>
-        <div class:hidden={!mobile_content_drawer} class="flex flex-col gap-y-1.5 px-2 bg-zinc-300 dark:bg-zinc-700">
-            <a href="/">Todo</a>
-            <a href="/">Todo</a>
-            <a href="/">Todo</a>
+        <div class="h-px bg-zinc-400" />
+        <div
+            id="mobile_content_drawer"
+            role="menu"
+            class:hidden={!mobile_content_drawer}
+            class="flex flex-col gap-y-1.5 p-2 bg-zinc-300 dark:bg-zinc-700"
+        >
+            <a href="/sectors/science">Science</a>
+            <a href="/sectors/economy">Economy</a>
+            <a href="/sectors/education">Education</a>
+            <a href="/sectors/healthcare">Healthcare</a>
+            <a href="/sectors/quality-of-life">Quality of life</a>
         </div>
-        <div class="h-px bg-zinc-400"></div>
+        <div class="h-px bg-zinc-400" />
         <div class="flex w-full justify-start items-center p-2">
             <svelte:component this={ThemeToggle} show_text />
         </div>
