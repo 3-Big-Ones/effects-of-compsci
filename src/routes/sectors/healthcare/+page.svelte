@@ -89,7 +89,11 @@
                 deserunt mollit anim id est laborum.
             </p>
             <div class="basis-1/4 p-1 border-black rounded bg-indigo-500">
-                <img src="/img/future_healthcare.jpg" class="object-cover rounded" />
+                <img
+                    src="/img/future_healthcare.jpg"
+                    class="object-cover rounded"
+                    alt="Future Healthcare"
+                />
                 <cite class="text-center">
                     Image by <a
                         href="https://www.freepik.com/free-vector/futuristic-technology-medical-infographic_7365075.htm"
