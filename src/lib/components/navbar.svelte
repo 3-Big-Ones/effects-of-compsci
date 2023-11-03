@@ -6,9 +6,14 @@
     import ChevronUp from "~icons/gg/chevron-up";
     import ChevronDown from "~icons/gg/chevron-down";
 
+    let dropdown = false;
     let mobile_menu = false;
     let mobile_content_drawer = false;
-    function toggle_menu(): void {
+
+    function toggle_dropdown(): void {
+        dropdown = !dropdown;
+    }
+    function toggle_mobile_menu(): void {
         mobile_menu = !mobile_menu;
     }
     function toggle_drawer(): void {
@@ -40,19 +45,75 @@
     <!-- Desktop Nav -->
     <div class="hidden xs:flex w-full h-16 px-5 justify-between items-center">
         <div class="hidden justify-center items-center xs:flex">
-            <a href="{base}/" class="flex items-center justify-start">
+            <a
+                href="{base}/"
+                class="flex items-center justify-start"
+                aria-hidden="true"
+                tabindex="-1"
+            >
                 <img src="{base}/img/logo.png" alt="A.K.A" width="64" height="100" />
             </a>
             <a href="{base}/" class="ml-6">Home</a>
             <a href="{base}/about" class="ml-6">About</a>
-            <button class="ml-6">Sectors</button>
+            <div class="relative inline-block">
+                <button
+                    class="ml-6 flex justify-center items-center"
+                    aria-controls="navbar-dropdown"
+                    on:click={toggle_dropdown}
+                    aria-label="Sectors"
+                    aria-expanded={dropdown}
+                    ><span>Sectors</span>{#if dropdown}<ChevronUp />{:else}<ChevronDown
+                        />{/if}</button
+                >
+                <div
+                    id="navbar-dropdown"
+                    class="absolute w-32 right-0 z-10 mt-2 origin-top-right rounded-md bg-white dark:bg-black shadow-lg dark:shadow-white/30 ring-1 ring-black dark:ring-white ring-opacity-5 focus:outline-none"
+                    role="menu"
+                    class:hidden={!dropdown}
+                    aria-orientation="vertical"
+                    aria-labelledby="menu-button"
+                    tabindex="-1"
+                >
+                    <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                    <a
+                        href="{base}/sectors/science"
+                        class="text-zinc-700 dark:text-zinc-100 block px-4 py-2 text-sm"
+                        role="menuitem">Science</a
+                    >
+                    <div class="h-px bg-zinc-400" />
+                    <a
+                        href="{base}/sectors/economy"
+                        class="text-zinc-700 dark:text-zinc-100 block px-4 py-2 text-sm"
+                        role="menuitem">Economy</a
+                    >
+                    <div class="h-px bg-zinc-400" />
+                    <a
+                        href="{base}/sectors/education"
+                        class="text-zinc-700 dark:text-zinc-100 block px-4 py-2 text-sm"
+                        role="menuitem">Education</a
+                    >
+                    <div class="h-px bg-zinc-400" />
+                    <a
+                        href="{base}/sectors/healthcare"
+                        class="text-zinc-700 dark:text-zinc-100 block px-4 py-2 text-sm"
+                        role="menuitem">Healthcare</a
+                    >
+                    <div class="h-px bg-zinc-400" />
+                    <a
+                        href="{base}/sectors/quality-of-life"
+                        class="text-zinc-700 dark:text-zinc-100 block px-4 py-2 text-sm"
+                        role="menuitem">Quality of life</a
+                    >
+                </div>
+            </div>
         </div>
         <!-- Theme selection buttons -->
         <ThemeToggle />
     </div>
     <!-- Mobile Nav -->
-    <div class="flex w-full h-16 justify-end items-center xs:hidden px-5">
-        <button on:click={toggle_menu}>
+    <div class="flex w-full h-16 justify-between items-center xs:hidden px-5">
+        <img src="{base}/img/logo.png" alt="A.K.A" width="64" height="100" />
+        <button on:click={toggle_mobile_menu}>
             {#if mobile_menu}<Close />{:else}<Menu />{/if}
         </button>
     </div>
@@ -65,7 +126,7 @@
         <button
             class="px-2 py-1.5 flex justify-between items-center"
             aria-label="Sectors"
-            aria-controls="mobile_content_drawer"
+            aria-controls="mobile-content-drawer"
             aria-expanded={mobile_content_drawer}
             on:click={toggle_drawer}
         >
@@ -74,16 +135,16 @@
         </button>
         <div class="h-px bg-zinc-400" />
         <div
-            id="mobile_content_drawer"
+            id="mobile-content-drawer"
             role="menu"
             class:hidden={!mobile_content_drawer}
             class="flex flex-col gap-y-1.5 p-2 bg-zinc-300 dark:bg-zinc-700"
         >
-            <a href="{base}/sectors/science">Science</a>
-            <a href="{base}/sectors/economy">Economy</a>
-            <a href="{base}/sectors/education">Education</a>
-            <a href="{base}/sectors/healthcare">Healthcare</a>
-            <a href="{base}/sectors/quality-of-life">Quality of life</a>
+            <a href="{base}/sectors/science" role="menu-item">Science</a>
+            <a href="{base}/sectors/economy" role="menu-item">Economy</a>
+            <a href="{base}/sectors/education" role="menu-item">Education</a>
+            <a href="{base}/sectors/healthcare" role="menu-item">Healthcare</a>
+            <a href="{base}/sectors/quality-of-life" role="menu-item">Quality of life</a>
         </div>
         <div class="h-px bg-zinc-400" />
         <div class="flex w-full justify-start items-center p-2">

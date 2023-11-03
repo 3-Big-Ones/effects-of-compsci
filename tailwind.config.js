@@ -9,6 +9,7 @@ export default {
             },
             backgroundImage: {
                 "hero-home": `url("${process.env.BASE_PATH ?? ""}/img/technology.jpg");`,
+                "hero-science": `url("${process.env.BASE_PATH ?? ""}/img/bg-science.webp");`,
             },
         },
     },
