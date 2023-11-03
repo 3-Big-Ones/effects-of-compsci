@@ -8,7 +8,8 @@ export default {
                 xs: "512px",
             },
             backgroundImage: {
-                "hero-home": "url('img/technology.jpg');",
+                "hero-home": "url('/img/technology.jpg');",
+                "hero-healthcare": "url('/img/healthcare.jpg')",
             },
         },
     },
