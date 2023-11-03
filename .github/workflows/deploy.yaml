@@ -29,7 +29,6 @@ jobs:
             - name: build
               env:
                   BASE_PATH: "/${{ github.event.repository.name }}"
-                  GITHUB_PAGES: true
               run: |
                   npm run build
 

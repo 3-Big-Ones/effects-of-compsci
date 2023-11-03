@@ -19,7 +19,8 @@ const config = {
             strict: true,
         }),
         paths: {
-            base: process.env.GITHUB_PAGES == "true" ? "/effects-of-compsci" : "/",
+            base: process.env.BASE_PATH ?? "",
+            relative: false,
         },
     },
 };
