@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import TopicCard from "./topic_card.svelte";
 </script>
 
@@ -34,7 +35,7 @@
         <!--Topic cards-->
         <div class="my-2 grow flex flex-col" />
         <TopicCard
-            image_path="/img/personalised_learning.jpg"
+            image_path="{base}/img/personalised_learning.jpg"
             title="Personalised Learning"
             text="
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -46,7 +47,7 @@
         "
         />
         <TopicCard
-            image_path="/img/remote_education.jpg"
+            image_path="{base}/img/remote_education.jpg"
             title="Remote Education"
             text="
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -58,7 +59,7 @@
         "
         />
         <TopicCard
-            image_path="/img/interactive_learning.jpg"
+            image_path="{base}/img/interactive_learning.jpg"
             title="Interactive Learning"
             text="
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -70,7 +71,7 @@
         "
         />
         <TopicCard
-            image_path="/img/resources.jpg"
+            image_path="{base}/img/resources.jpg"
             title="Access to immense digital resources"
             text="
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -84,7 +85,7 @@
         <!--Topic box-->
         <div class="m-10 border-black border-2 flex md:flex-row flex-col">
             <div class="basis-2/5 flex overflow-hidden">
-                <img src="/img/future_education.jpg" class="grow" alt="Future Education" />
+                <img src="{base}/img/future_education.jpg" class="grow" alt="Future Education" />
             </div>
             <div class="p-10 basis-3/5 flex flex-col">
                 <h2 class="mb-5 font-serif md:text-6xl text-4xl">
