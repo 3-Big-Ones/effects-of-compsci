@@ -20,7 +20,7 @@ const config = {
         }),
     },
     base: {
-        path: "effects-of-compsci",
+        path: "/effects-of-compsci",
     },
 };
 
