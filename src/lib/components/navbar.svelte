@@ -1,23 +1,20 @@
 <script lang="ts">
+    // Used to prepend path needed for github pages.
     import { base } from "$app/paths";
+    // Icons
     import ThemeToggle from "./theme_toggle.svelte";
     import Menu from "~icons/gg/menu";
     import Close from "~icons/gg/close";
     import ChevronUp from "~icons/gg/chevron-up";
     import ChevronDown from "~icons/gg/chevron-down";
 
+    // State of menu's: false=closed true=open
     let dropdown = false;
     let mobile_menu = false;
     let mobile_content_drawer = false;
 
     function toggle_dropdown(): void {
         dropdown = !dropdown;
-    }
-    function toggle_mobile_menu(): void {
-        mobile_menu = !mobile_menu;
-    }
-    function toggle_drawer(): void {
-        mobile_content_drawer = !mobile_content_drawer;
     }
 </script>
 
@@ -70,6 +67,8 @@
                     class="absolute w-32 right-0 z-10 mt-2 origin-top-right rounded-md bg-white dark:bg-black shadow-lg dark:shadow-white/30 ring-1 ring-black dark:ring-white ring-opacity-5 focus:outline-none"
                     role="menu"
                     class:hidden={!dropdown}
+                    on:click={toggle_dropdown}
+                    on:keypress={toggle_dropdown}
                     aria-orientation="vertical"
                     aria-labelledby="menu-button"
                     tabindex="-1"
@@ -113,7 +112,7 @@
     <!-- Mobile Nav -->
     <div class="flex w-full h-16 justify-between items-center xs:hidden px-5">
         <img src="{base}/img/logo.png" alt="A.K.A" width="64" height="100" />
-        <button on:click={toggle_mobile_menu}>
+        <button on:click={() => (mobile_menu = !mobile_menu)}>
             {#if mobile_menu}<Close />{:else}<Menu />{/if}
         </button>
     </div>
@@ -128,7 +127,7 @@
             aria-label="Sectors"
             aria-controls="mobile-content-drawer"
             aria-expanded={mobile_content_drawer}
-            on:click={toggle_drawer}
+            on:click={() => (mobile_content_drawer = !mobile_content_drawer)}
         >
             <span>Sectors</span>
             {#if mobile_content_drawer} <ChevronUp /> {:else} <ChevronDown /> {/if}
@@ -140,11 +139,11 @@
             class:hidden={!mobile_content_drawer}
             class="flex flex-col gap-y-1.5 p-2 bg-zinc-300 dark:bg-zinc-700"
         >
-            <a href="{base}/sectors/science" role="menu-item">Science</a>
-            <a href="{base}/sectors/economy" role="menu-item">Economy</a>
-            <a href="{base}/sectors/education" role="menu-item">Education</a>
-            <a href="{base}/sectors/healthcare" role="menu-item">Healthcare</a>
-            <a href="{base}/sectors/quality-of-life" role="menu-item">Quality of life</a>
+            <a href="{base}/sectors/science" role="menuitem">Science</a>
+            <a href="{base}/sectors/economy" role="menuitem">Economy</a>
+            <a href="{base}/sectors/education" role="menuitem">Education</a>
+            <a href="{base}/sectors/healthcare" role="menuitem">Healthcare</a>
+            <a href="{base}/sectors/quality-of-life" role="menuitem">Quality of life</a>
         </div>
         <div class="h-px bg-zinc-400" />
         <div class="flex w-full justify-start items-center p-2">
