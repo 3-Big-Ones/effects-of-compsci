@@ -20,7 +20,7 @@ const config = {
         }),
     },
     base: {
-        path: "/effects-of-compsci",
+        path: (process.env.GITHUB_PAGES === "true") ? "/effects-of-compsci" : "/",
     },
 };
 

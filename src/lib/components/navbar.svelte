@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import ThemeToggle from "./theme_toggle.svelte";
     import Menu from "~icons/gg/menu";
     import Close from "~icons/gg/close";
@@ -39,11 +40,11 @@
     <!-- Desktop Nav -->
     <div class="hidden xs:flex w-full h-16 px-5 justify-between items-center">
         <div class="hidden justify-center items-center xs:flex">
-            <a href="/" class="flex items-center justify-start">
+            <a href="{base}/" class="flex items-center justify-start">
                 <img src="/img/logo.png" alt="A.K.A" width="64" height="100" />
             </a>
-            <a href="/" class="ml-6">Home</a>
-            <a href="/about" class="ml-6">About</a>
+            <a href="{base}/" class="ml-6">Home</a>
+            <a href="{base}/about" class="ml-6">About</a>
             <button class="ml-6">Sectors</button>
         </div>
         <!-- Theme selection buttons -->
@@ -59,8 +60,8 @@
         class:hidden={!mobile_menu}
         class="xs:hidden flex flex-col w-full bg-zinc-200 dark:bg-zinc-800"
     >
-        <a href="/" class="px-2 py-1.5">Home</a>
-        <a href="/about" class="px-2 py-1.5">About</a>
+        <a href="{base}/" class="px-2 py-1.5">Home</a>
+        <a href="{base}/about" class="px-2 py-1.5">About</a>
         <button
             class="px-2 py-1.5 flex justify-between items-center"
             aria-label="Sectors"
@@ -78,11 +79,11 @@
             class:hidden={!mobile_content_drawer}
             class="flex flex-col gap-y-1.5 p-2 bg-zinc-300 dark:bg-zinc-700"
         >
-            <a href="/sectors/science">Science</a>
-            <a href="/sectors/economy">Economy</a>
-            <a href="/sectors/education">Education</a>
-            <a href="/sectors/healthcare">Healthcare</a>
-            <a href="/sectors/quality-of-life">Quality of life</a>
+            <a href="{base}/sectors/science">Science</a>
+            <a href="{base}/sectors/economy">Economy</a>
+            <a href="{base}/sectors/education">Education</a>
+            <a href="{base}/sectors/healthcare">Healthcare</a>
+            <a href="{base}/sectors/quality-of-life">Quality of life</a>
         </div>
         <div class="h-px bg-zinc-400" />
         <div class="flex w-full justify-start items-center p-2">
