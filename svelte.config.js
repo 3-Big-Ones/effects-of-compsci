@@ -18,9 +18,10 @@ const config = {
             precompress: false,
             strict: true,
         }),
-    },
-    base: {
-        path: "effects-of-compsci",
+        paths: {
+            base: process.env.BASE_PATH ?? "",
+            relative: false,
+        },
     },
 };
 

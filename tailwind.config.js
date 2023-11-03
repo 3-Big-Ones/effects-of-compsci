@@ -8,9 +8,9 @@ export default {
                 xs: "512px",
             },
             backgroundImage: {
-                "hero-home": "url('/img/technology.jpg');",
-                "hero-healthcare": "url('/img/healthcare.jpg')",
-                "hero-education": "url('/img/education.jpg')",
+                "hero-home": `url("${process.env.BASE_PATH ?? ""}/img/technology.jpg");`,
+                "hero-healthcare": `url("${process.env.BASE_PATH ?? ""}/img/healthcare.jpg")`,
+                "hero-education": `url("${process.env.BASE_PATH ?? ""}/img/education.jpg")`,
             },
         },
     },
