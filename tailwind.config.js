@@ -10,6 +10,7 @@ export default {
             backgroundImage: {
                 "hero-home": "url('/img/technology.jpg');",
                 "hero-healthcare": "url('/img/healthcare.jpg')",
+                "hero-education": "url('/img/education.jpg')",
             },
         },
     },
