@@ -18,9 +18,9 @@ const config = {
             precompress: false,
             strict: true,
         }),
-    },
-    base: {
-        path: (process.env.GITHUB_PAGES === "true") ? "/effects-of-compsci" : "/",
+        paths: {
+            base: process.env.GITHUB_PAGES == "true" ? "/effects-of-compsci" : "/",
+        },
     },
 };
 
