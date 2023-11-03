@@ -14,12 +14,11 @@
         class="mx-[10vw] mb-20 p-6 text-white text-xl border-black border-2 bg-black bg-opacity-60"
     >
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
+            In an increasingly digitised world, the influence of computer science on healthcare is
+            undeniable. This page delves into this evolving relationship, exploring how technology
+            is reshaping the healthcare landscape. From artificial intelligence aiding in medical
+            diagnoses to the adoption of electronic health records, we'll uncover the various impact
+            of these advancements.
         </p>
     </div>
     <!--Topic cards-->
@@ -28,65 +27,63 @@
             image_path="/img/telemedicine.jpg"
             title="Telemedicine"
             text="
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Telemedicine platform facilitate remote consultations and enhanced chronic
+                conditions monitoring, benefiting elderly patients in remote or rural areas. Some
+                businesses and researchers are working on telesurgery, a field in which robotic
+                systems are used for remote surgery. This has become more viable due to improved
+                networking technology such as 5G.
         "
         />
         <TopicCard
             image_path="/img/wearables.jpg"
             title="Healthcare Wearables"
             text="
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Wearable technology features built-in sensors for tracking activity and monitoring
+                health. These sensors collect data and utilize algorithms and machine learning for
+                analysis. Some wearables, especially those with ECG capabilities, prove invaluable
+                for early intervention and ongoing patient condition monitoring.
         "
         />
         <TopicCard
             image_path="/img/radiology.jpg"
             title="Radiology and Imaging"
             text="
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Artificial intelligence, notably Mia (Mammography Intelligent Assessment), assists
+                radiologists by helping them work more efficiently, These technologies allow
+                radiologists to devote more time to patient care or screen greater number of people
+                quickly. It's a vital tool in enhancing the accuracy and efficiency of diagnosis and
+                treatment.
         "
         />
         <TopicCard
             image_path="/img/big_data.jpg"
             title="Big Data Analysis"
             text="
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Big data analysis in healthcare involves the collection, processing, and
+                interpretation of vast amounts of health-related information. This data allows
+                healthcare providers to identify patterns and enables early disease detection and
+                personalized treatment plans. Moreover, big data analytics can enhance research,
+                drug development, and healthcare operations.
         "
         />
     </div>
     <!--Topic box-->
-    <div class="m-10 p-10 border-black border-2 flex flex-col">
+    <div class="m-10 p-8 border-black border-2 flex flex-col">
         <h2 class="mb-5 font-serif md:text-6xl text-4xl">
             Future of Healthcare with Computer Science?
         </h2>
         <hr class="mb-5 border-black" />
         <div class="flex md:flex-row flex-col">
-            <p class="mb-5 mr-5 basis-3/4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+            <p
+                class="grow mb-5 mr-5 p-4 basis-3/4 font-mono text-2xl bg-white bg-opacity-80 rounded"
+            >
+                Over the past decades, healthcare has rapidly improved with the advancement of
+                technology. Now, Brain-Computer Interfaces, once the stuff of science fiction, are
+                becoming more realistic. It prompts us to imagine whether there will be a day when
+                our health information is seamlessly collected by in-body sensors, seamlessly
+                tracking and monitoring our well-being. However, the question remains: is this a
+                utopian vision of healthcare, where everything is convenient and precise, or does it
+                raise concerns of a dystopian future where privacy and autonomy are compromised?
             </p>
             <div class="basis-1/4 p-1 border-black rounded bg-indigo-500">
                 <img
