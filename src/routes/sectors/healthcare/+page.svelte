@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import TopicCard from "./topic_card.svelte";
 </script>
 
@@ -24,7 +25,7 @@
     <!--Topic cards-->
     <div class="my-2 grow flex md:flex-row flex-col">
         <TopicCard
-            image_path="/img/telemedicine.jpg"
+            image_path="{base}/img/telemedicine.jpg"
             title="Telemedicine"
             text="
                 Telemedicine platform facilitate remote consultations and enhanced chronic
@@ -35,7 +36,7 @@
         "
         />
         <TopicCard
-            image_path="/img/wearables.jpg"
+            image_path="{base}/img/wearables.jpg"
             title="Healthcare Wearables"
             text="
                 Wearable technology features built-in sensors for tracking activity and monitoring
@@ -45,7 +46,7 @@
         "
         />
         <TopicCard
-            image_path="/img/radiology.jpg"
+            image_path="{base}/img/radiology.jpg"
             title="Radiology and Imaging"
             text="
                 Artificial intelligence, notably Mia (Mammography Intelligent Assessment), assists
@@ -56,7 +57,7 @@
         "
         />
         <TopicCard
-            image_path="/img/big_data.jpg"
+            image_path="{base}/img/big_data.jpg"
             title="Big Data Analysis"
             text="
                 Big data analysis in healthcare involves the collection, processing, and
@@ -87,7 +88,7 @@
             </p>
             <div class="basis-1/4 p-1 border-black rounded bg-indigo-500">
                 <img
-                    src="/img/future_healthcare.jpg"
+                    src="{base}/img/future_healthcare.jpg"
                     class="object-cover rounded"
                     alt="Future Healthcare"
                 />
