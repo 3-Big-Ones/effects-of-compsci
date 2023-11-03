@@ -97,12 +97,6 @@
                         class="text-zinc-700 dark:text-zinc-100 block px-4 py-2 text-sm"
                         role="menuitem">Healthcare</a
                     >
-                    <div class="h-px bg-zinc-400" />
-                    <a
-                        href="{base}/sectors/quality-of-life"
-                        class="text-zinc-700 dark:text-zinc-100 block px-4 py-2 text-sm"
-                        role="menuitem">Quality of life</a
-                    >
                 </div>
             </div>
         </div>
@@ -143,7 +137,6 @@
             <a href="{base}/sectors/economy" role="menuitem">Economy</a>
             <a href="{base}/sectors/education" role="menuitem">Education</a>
             <a href="{base}/sectors/healthcare" role="menuitem">Healthcare</a>
-            <a href="{base}/sectors/quality-of-life" role="menuitem">Quality of life</a>
         </div>
         <div class="h-px bg-zinc-400" />
         <div class="flex w-full justify-start items-center p-2">
